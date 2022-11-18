@@ -9,6 +9,28 @@ import axios from "axios";
   console.log(response);
 });
  */
+/* axios
+  .get(
+    "https://api.themoviedb.org/3/movie/550?api_key=032fbeca0b3ecfed391e6a7c5896b0c1"
+  )
+  .then((response) => {
+    console.log(response);
+  }); */
+
+/* axios.get("http://15.165.220.123:8000/api/v1/winesearch/").then((response) => {
+  console.log(response);
+}); */
+
+/* async function getData() {
+  try {
+    //응답 성공
+    const response = await axios.get('url주소');
+    console.log(response);
+  } catch (error) {
+    //응답 실패
+    console.error(error);
+  }
+} */
 
 const API_KEY = "c275787762fb2904adb52c4ad6412662";
 
@@ -60,35 +82,6 @@ export const HomePage = () => {
 
   return (
     <div className="m-4 space-y-10">
-      <div className="flex justify-center text-black text-3xl font-extrabold">
-        <a href="http://localhost:3000/homepage">wabawachi</a>
-      </div>
-      <div>
-        <div className="flex justify-evenly mt-4">
-          <a
-            href="http://localhost:3000/search"
-            className="w-40 text-center px-6 py-3 text-white text-xl font-semibold no-underline bg-green-700 rounded-md hover:bg-blue-600 hover:underline hover:text-blue-200">
-            와인 검색
-          </a>
-          <a
-            href="http://localhost:3000/find"
-            className="w-40 text-center px-6 py-3 text-white text-xl font-semibold no-underline bg-green-700 rounded-md hover:bg-blue-600 hover:underline hover:text-blue-200">
-            와인 추천
-          </a>
-        </div>
-        <div className="flex justify-evenly  mt-4">
-          <a
-            href="http://localhost:3000/winecellar"
-            className="w-40 text-center px-6 py-3 text-white text-xl font-semibold no-underline bg-green-700 rounded-md hover:bg-blue-600 hover:underline hover:text-blue-200">
-            와인 셀러
-          </a>
-          <a
-            href="http://localhost:3000/recommand"
-            className="w-40 text-center px-6 py-3 text-white text-xl font-semibold no-underline bg-green-700 rounded-md hover:bg-blue-600 hover:underline hover:text-blue-200">
-            오늘의 와인
-          </a>
-        </div>
-      </div>
       <div className="className=">
         <div className="space-y-4">
           <div className="text-2xl font-bold">New</div>

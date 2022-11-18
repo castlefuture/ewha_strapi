@@ -9,10 +9,13 @@ export const LoginPage = () => {
   const { replace } = useHistory();
 
   const checkUser = () => {
+    if (email === "" || password === "") {
+      alert("아이디와 비밀번호를 입력해주세요");
+      return;
+    }
     axios
-      .post("http://15.165.220.123:8000/api/v1/users/auth/", {
-        //보내고자 하는 데이터
-        email: email,
+      .post("http://localhost:1337/api/auth/local", {
+        identifier: email,
         password: password,
       })
       .then((response) => {
@@ -21,6 +24,11 @@ export const LoginPage = () => {
         console.log("User token", response.data.jwt);
         localStorage.setItem("token", response.data.jwt);
         replace("/");
+      })
+      .catch((error) => {
+        // Handle error.
+        // console.log("An error occurred:", error.response);
+        alert("error");
       });
   };
   useEffect(() => {
@@ -60,7 +68,7 @@ export const LoginPage = () => {
           }}>
           로그인
         </div>
-        <div className="text-gray-800 text-center mt-2 py-4 rounded-md border border-gray-800">
+        <div className="text-center py-4 text-gray-800 border border-gray-800">
           회원가입
         </div>
       </div>
