@@ -10,7 +10,7 @@ export const LoginPage = () => {
 
   const checkUser = () => {
     axios
-      .post("http://15.165.220.123:8000/api/v1/users/auth/", {
+      .post("http://3.38.57.203:8000/api/v1/users/auth/", {
         //보내고자 하는 데이터
         email: email,
         password: password,

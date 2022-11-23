@@ -14,7 +14,7 @@ export const SignupPage = () => {
 
   const register = () => {
     axios
-      .post("http://15.165.220.123:8000/api/v1/users/register/", {
+      .post("http://3.38.57.203:8000/api/v1/users/register/", {
         email: email,
         password: password,
         username: username,
